@@ -19,6 +19,11 @@ const productSchema = Schema(
     image_url: {
       type: String,
     },
+    category: {
+      type: Schema.Types.ObjectId,
+      ref: "Category",
+    },
+    tags: [{ type: Schema.Types.ObjectId, ref: "Tag" }],
   },
   { timestamps: true }
 );
